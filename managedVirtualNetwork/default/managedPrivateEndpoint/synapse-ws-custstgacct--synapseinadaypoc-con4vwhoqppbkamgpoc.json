@@ -1,0 +1,7 @@
+{
+	"name": "synapse-ws-custstgacct--synapseinadaypoc-con4vwhoqppbkamgpoc",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/6f34f5db-6eeb-4335-a1cc-6241bf73271d/resourceGroups/azuresynapsepoc/providers/Microsoft.Storage/storageAccounts/con4vwhoqppbkamgpoc",
+		"groupId": "dfs"
+	}
+}

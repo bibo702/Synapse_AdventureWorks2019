@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 2",
+	"properties": {
+		"content": {
+			"query": "-- DROP EXTERNAL TABLE trackers\n-- Drop EXTERNAL FILE FORMAT SynapseDelimitedTextFormat\n\nIF NOT EXISTS (SELECT * FROM sys.external_file_formats WHERE name = 'SynapseDelimitedTextFormat') \n\tCREATE EXTERNAL FILE FORMAT [SynapseDelimitedTextFormat] \n\tWITH ( FORMAT_TYPE = DELIMITEDTEXT ,\n\t       FORMAT_OPTIONS (\n\t\t\t FIELD_TERMINATOR = ',',\n\t\t\t FIRST_ROW=2,\n\t\t\t USE_TYPE_DEFAULT = FALSE\n\t\t\t))\n\nGO\n\nIF NOT EXISTS (SELECT * FROM sys.external_data_sources WHERE name = 'dlsconpocfs1_con4vwhoqppbkamgpoc_dfs_core_windows_net') \n\tCREATE EXTERNAL DATA SOURCE [dlsconpocfs1_con4vwhoqppbkamgpoc_dfs_core_windows_net] \n\tWITH (\n\t\tLOCATION = 'abfss://dlsconpocfs1@con4vwhoqppbkamgpoc.dfs.core.windows.net' \n\t)\nGO\n\nCREATE EXTERNAL TABLE trackers (\n\t[tracker_id] INT,\n\t[subject_id] INT,\n\t[review_status] nvarchar(200),\n\t[review_comment] nvarchar(200)\n\t)\n\tWITH (\n\tLOCATION = 'trackers2.csv',\n\tDATA_SOURCE = [dlsconpocfs1_con4vwhoqppbkamgpoc_dfs_core_windows_net],\n\tFILE_FORMAT = [SynapseDelimitedTextFormat]\n\t)\nGO\n\n\nSELECT TOP 100 * FROM dbo.trackers\nGO",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "powerappdb",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

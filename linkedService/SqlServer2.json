@@ -1,0 +1,17 @@
+{
+	"name": "SqlServer2",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=LAPTOP-27ABQFU4;initial catalog=LAPTOP-27ABQFU4",
+			"userName": "REDMOND\\habibselmane",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJiODQ3MDBhYy02NTJjLTQzN2UtYjRjZS1kNjI2OGM5ODZkZTYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "synapse1dayselfhostedIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
