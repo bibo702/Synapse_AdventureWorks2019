@@ -6,10 +6,10 @@
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
 			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=db4pbidemo.database.windows.net;initial catalog=AdventureWorksDW;user id=REDMOND\\habibselmane",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIlNZTkFQU0VANDZBNDY3RjctOEZCRC00NzRELUI4MjktMEI4MzQwN0YwMDhDXzc5NmJhNjM2LTE1NGEtNDY4NC05YWNjLWIyN2FjMjdmNWVlYyINCn0="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwYjBlZDcxZS04M2Y4LTRmNmYtYWVjZi1jZTBiODdlYjUxNjAiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
-			"referenceName": "AutoResolveIntegrationRuntime",
+			"referenceName": "synapse1dayselfhostedIR",
 			"type": "IntegrationRuntimeReference"
 		}
 	}
